@@ -36,12 +36,25 @@
 #include "kaimana.h"
 
 
-// uncomment exactly one of the _LED_ORDER_*_ choices below or make your own 
+// uncomment exactly one of the _LED_ORDER_*_ choices below or make your own
 // based on the order you have your LEDs connected to the Kaimana board
 //
 //#define  _LED_ORDER_DEFAULT_  true
 //#define  _LED_ORDER_MIGHTYJR_   true
-#define  _LED_ORDER_JWYDER_ 	true
+//#define  _LED_ORDER_JWYDER_ 	true
+#define _LED_ORDER_NUK3_ true
+
+#ifdef _LED_ORDER_NUK3_
+  #define  LED_JOY     0
+  #define  LED_P1      1
+  #define  LED_P2      2
+  #define  LED_P3      3
+  #define  LED_P4      4
+  #define  LED_K4      5
+  #define  LED_K3      6
+  #define  LED_K2      7
+  #define  LED_K1      8
+#endif
 
 #ifdef _LED_ORDER_DEFAULT_
   // Map function names to default LED index numbers
@@ -68,7 +81,7 @@
 
 
 #ifdef _LED_ORDER_JWYDER_
-  // Map function names to LED index numbers 
+  // Map function names to LED index numbers
   // example for just K4-K1 and P1-P4 are connected first to the Kaimana board
   // submitted by jwyder
   //
@@ -92,7 +105,7 @@
 
 
 #ifdef _LED_ORDER_MIGHTYJR_
-  // Map function names to LED index numbers 
+  // Map function names to LED index numbers
   // example for just P1-P4  and K4-K1 are connected first to the Kaimana board
   // submitted by MIGHTYJR
   //
@@ -127,7 +140,7 @@
 #define  MAIN_LOOP_DELAY           50    // value in miliseconds - used main loop
 #define  IDLE_TIMEOUT_SECONDS       3    // value in seconds - normally 60 or 30 seconds but set very short for testing
 #define  IDLE_ANIMATION_DELAY       5    // value in miliseconds - use smaller value for faster idle animation playback
-#define  T_DELAY      			  250    
+#define  T_DELAY      			  250
 
 // definitions of RGB values use by random color generator: setLEDRandomColor(int)
 #define  COLOR_RANDOM_1    127,220,000    // lime green
@@ -138,7 +151,7 @@
 #define  COLOR_RANDOM_6    255,000,000    // red
 #define  COLOR_RANDOM_7    220,127,000    // orange
 #define  COLOR_RANDOM_8    220,000,127    // magenta
-#define  COLOR_RANDOM_9	   177,037,075	
+#define  COLOR_RANDOM_9	   177,037,075
 
 // definitions for combo switch patterns
 //
@@ -157,7 +170,7 @@
 #define  COMBO_PATTERN_5A    ATTACK_RIGHT + ATTACK_P3, ATTACK_RIGHT, ATTACK_DOWN + ATTACK_RIGHT, ATTACK_DOWN, ATTACK_NONE, ATTACK_RIGHT, ATTACK_DOWN + ATTACK_RIGHT, ATTACK_DOWN
 #define  COMBO_PATTERN_6A    ATTACK_RIGHT + ATTACK_K3, ATTACK_RIGHT, ATTACK_DOWN + ATTACK_RIGHT, ATTACK_DOWN, ATTACK_NONE, ATTACK_RIGHT, ATTACK_DOWN + ATTACK_RIGHT, ATTACK_DOWN
 
-//#define  START_MENU			 ATTACK_P4 + ATTACK_P3 
+//#define  START_MENU			 ATTACK_P4 + ATTACK_P3
 #define  TOURNAMENT_MODE     	ATTACK_P4 + ATTACK_P3
 //ATTACK_LEFT, ATTACK_RIGHT , ATTACK_LEFT,ATTACK_RIGHT
 // data points for single full sinusoidal wave _/-\_/-
@@ -251,4 +264,3 @@ const uint8_t colorCycleData[] PROGMEM = {
 
 
 #endif
-

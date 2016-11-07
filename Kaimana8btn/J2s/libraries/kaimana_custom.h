@@ -41,7 +41,7 @@
 #define LED_START_COLOR_ON 127,0,220
 
 
-//OFF BUTTON STATE 
+//OFF BUTTON STATE
 #define LED_JOY_COLOR_OFF 255,0,0
 #define LED_P1_COLOR_OFF 127,0,220
 #define LED_P2_COLOR_OFF 127,0,220
@@ -65,7 +65,7 @@
 #define COLOR_RANDOM_6 255,0,255
 #define COLOR_RANDOM_7 127,255,0
 #define COLOR_RANDOM_8 255,0,127
-  
+
 //BOOT AND IDLE SEQUENCE TIMING
 #define  BOOT_COLOR_DELAY         250
 #define  BOOT_COMPLETE_DELAY      500
@@ -75,29 +75,29 @@
 #define BRIGHTNESS                 1
 
 //LED INDEX
-#define  LED_P4         15
-#define  LED_P4_B       16
-#define  LED_P3         13
-#define  LED_P3_B       14
-#define  LED_P2         11    
-#define  LED_P2_B       12
-#define  LED_P1         9
-#define  LED_P1_B       10
-#define  LED_JOY        0xFF    
-#define  LED_K4         0        
-#define  LED_K4_B       1
-#define  LED_K3         2 
-#define  LED_K3_B       3
-#define  LED_K2         4
-#define  LED_K2_B       5
-#define  LED_K1         6
-#define  LED_K1_B       7
-#define  LED_SELECT     17
-#define  LED_SELECT_B   18
-#define  LED_HOME       19
-#define  LED_HOME_B     20
-#define  LED_START      21
-#define  LED_START_B    22
-#define  LED_COUNT      23
+#define  LED_P4         7
+#define  LED_P4_B       8
+#define  LED_P3         5
+#define  LED_P3_B       6
+#define  LED_P2         3
+#define  LED_P2_B       4
+#define  LED_P1         1
+#define  LED_P1_B       2
+#define  LED_JOY        0
+#define  LED_K4         9
+#define  LED_K4_B       10
+#define  LED_K3         11
+#define  LED_K3_B       12
+#define  LED_K2         13
+#define  LED_K2_B       14
+#define  LED_K1         15
+#define  LED_K1_B       16
+#define  LED_SELECT     0xFF
+#define  LED_SELECT_B   0xFF
+#define  LED_HOME       0xFF
+#define  LED_HOME_B     0xFF
+#define  LED_START      0xFF
+#define  LED_START_B    0xFF
+#define  LED_COUNT      17
 
 #endif
